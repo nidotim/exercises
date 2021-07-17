@@ -19,7 +19,7 @@ public class LevelOrderTraversalTest {
 
   @Test
   public void postOrderTraversal() {
-    Node root = NodeUtil.createNode(Arrays.asList(1, 2, 5, 3, 6, 4));
+    Node root = NodeUtil.createBinarySearchTreeNode(Arrays.asList(1, 2, 5, 3, 6, 4));
     String result = levelOrderTraversal.traverse(root);
     String expectedResult = "1 2 5 3 6 4";
     Assert.assertEquals(expectedResult, result);

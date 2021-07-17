@@ -19,7 +19,7 @@ public class PreOrderTraversalTest {
 
   @Test
   public void preOrderTraversal() {
-    Node root = NodeUtil.createNode(Arrays.asList(1, 2, 5, 3, 4, 6));
+    Node root = NodeUtil.createBinarySearchTreeNode(Arrays.asList(1, 2, 5, 3, 4, 6));
     String result = preOrderTraversal.preOrder(root);
     String expectedResult = "1 2 5 3 4 6";
     Assert.assertEquals(expectedResult, result);

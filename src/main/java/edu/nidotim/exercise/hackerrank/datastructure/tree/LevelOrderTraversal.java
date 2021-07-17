@@ -3,7 +3,9 @@ package edu.nidotim.exercise.hackerrank.datastructure.tree;
 
 import edu.nidotim.exercise.util.datastructure.Node;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 // https://www.hackerrank.com/challenges/tree-preorder-traversal/problem
 // Sample Input
@@ -23,6 +25,23 @@ import java.util.List;
 public class LevelOrderTraversal {
 
   public String traverse(Node root) {
+    String result = "";
+    Queue<Node> queue = new LinkedList<>();
+    queue.add(root);
+    while (!queue.isEmpty()) {
+      Node node = queue.remove();
+      result += node.data + " ";
+      if (node.left != null) {
+        queue.add(node.left);
+      }
+      if (node.right != null) {
+        queue.add(node.right);
+      }
+    }
+    return result;
+  }
+
+  public String traverse2(Node root) {
     if (root == null) {
       return "";
     }

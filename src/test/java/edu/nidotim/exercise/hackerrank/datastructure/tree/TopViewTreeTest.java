@@ -8,20 +8,20 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class PostOrderTraversalTest {
+public class TopViewTreeTest {
 
-  PostOrderTraversal postOrderTraversal;
+  TopViewTree topViewTree;
 
   @Before
   public void before() {
-    postOrderTraversal = new PostOrderTraversal();
+    topViewTree = new TopViewTree();
   }
 
   @Test
-  public void postOrderTraversal() {
-    Node root = NodeUtil.createBinarySearchTreeNode(Arrays.asList(1, 2, 5, 3, 6, 4));
-    String result = postOrderTraversal.postOrder(root);
-    String expectedResult = "4 3 6 5 2 1";
+  public void topViewTreeTest() {
+    Node root = NodeUtil.createBinarySearchTreeNode(Arrays.asList(1, 2, 5, 3, 4, 6));
+    String result = topViewTree.topView(root);
+    String expectedResult = "1 2 5 6";
     Assert.assertEquals(expectedResult, result);
   }
 

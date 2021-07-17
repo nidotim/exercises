@@ -19,7 +19,7 @@ public class BinaryTreeHeightTest {
 
   @Test
   public void binaryTreeHeight() {
-    Node root = NodeUtil.createNode(Arrays.asList(3, 5, 2, 1, 4, 6, 7));
+    Node root = NodeUtil.createBinarySearchTreeNode(Arrays.asList(3, 5, 2, 1, 4, 6, 7));
     int result = binaryTreeHeight.height(root);
     int expectedResult = 3;
     Assert.assertEquals(expectedResult, result);
