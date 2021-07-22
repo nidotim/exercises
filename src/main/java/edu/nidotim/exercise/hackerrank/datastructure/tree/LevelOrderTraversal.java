@@ -38,7 +38,7 @@ public class LevelOrderTraversal {
         queue.add(node.right);
       }
     }
-    return result;
+    return result.trim();
   }
 
   public String traverse2(Node root) {

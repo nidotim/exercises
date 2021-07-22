@@ -15,8 +15,9 @@ import java.util.List;
 // 3
 public class CastleOnTheGrid {
 
+  // TODO not finished
   public int minimumMoves(List<String> grid, int startX, int startY, int goalX, int goalY) {
-    
+
     return 0;
   }
 
