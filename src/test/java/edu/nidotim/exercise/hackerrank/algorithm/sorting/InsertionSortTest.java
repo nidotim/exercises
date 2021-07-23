@@ -31,7 +31,7 @@ public class InsertionSortTest {
   }
 
   @Test
-  public void testInsertionSort2() {
+  public void testInsertionSort1_2() {
     int n = 10;
     List<Integer> unsorted = Arrays.asList(2, 3, 4, 5, 6, 7, 8, 9, 10, 1);
     List<List<Integer>> expectedResult = Arrays.asList(
@@ -51,4 +51,32 @@ public class InsertionSortTest {
     Assert.assertEquals(expectedResult, results);
   }
 
+
+  @Test
+  public void testInsertionSort2() {
+    int n = 7;
+    List<Integer> unsorted = Arrays.asList(3, 4, 7, 5, 6, 2, 1);
+    List<List<Integer>> expectedResult = Arrays.asList(
+        Arrays.asList(3, 4, 7, 5, 6, 2, 1),
+        Arrays.asList(3, 4, 7, 5, 6, 2, 1),
+        Arrays.asList(3, 4, 5, 7, 6, 2, 1),
+        Arrays.asList(3, 4, 5, 6, 7, 2, 1),
+        Arrays.asList(2, 3, 4, 5, 6, 7, 1),
+        Arrays.asList(1, 2, 3, 4, 5, 6, 7)
+    );
+    List<List<Integer>> results = insertionSort.insertionSort2(n, unsorted);
+
+    Assert.assertEquals(expectedResult, results);
+  }
+
+
+  @Test
+  public void testInsertionSort3() {
+    int n = 7;
+    int[] ary = new int[]{4, 1, 3, 5, 6, 2};
+    int[] expectedResult = new int[]{1, 2, 3, 4, 5, 6};
+    int[] results = insertionSort.insertionSort3(ary);
+
+    Assert.assertEquals(expectedResult, results);
+  }
 }
