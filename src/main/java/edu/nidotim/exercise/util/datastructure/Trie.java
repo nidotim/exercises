@@ -2,7 +2,7 @@ package edu.nidotim.exercise.util.datastructure;
 
 public class Trie {
 
-  private TrieNode root;
+  protected TrieNode root;
 
   public Trie() {
     root = new TrieNode();
