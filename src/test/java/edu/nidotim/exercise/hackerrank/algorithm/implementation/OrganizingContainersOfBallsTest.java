@@ -56,7 +56,6 @@ public class OrganizingContainersOfBallsTest {
     Assert.assertEquals(expectedResult, results);
   }
 
-
   @Test
   public void testOrganizingContainersOfBalls4() {
 
@@ -96,4 +95,33 @@ public class OrganizingContainersOfBallsTest {
 
     Assert.assertEquals(expectedResult, results);
   }
+
+  @Test
+  public void testOrganizingContainersOfBalls6() {
+
+    List<List<Integer>> containers = Arrays.asList(
+        Arrays.asList(658479595, 991026365, 701943273, 985987715, 719337042, 722922265, 836184992,
+            997390019),
+        Arrays.asList(653823732, 987522780, 589399866, 478615729, 557346728, 998345398, 976004072,
+            988036757),
+        Arrays.asList(994178245, 921203685, 621915912, 999193949, 963102859, 993519056, 592203832,
+            478506452),
+        Arrays.asList(786387682, 648132661, 822795292, 593514823, 980971817, 997706087, 999501631,
+            990282514),
+        Arrays.asList(999706441, 653915483, 975359599, 932739873, 996240758, 687222082, 731552322,
+            969677609),
+        Arrays.asList(583521046, 994945676, 966520116, 984718769, 969257170, 613059968, 989811731,
+            598707601),
+        Arrays.asList(997894683, 580781282, 893089090, 649843468, 947389156, 553369641, 998629888,
+            992589492),
+        Arrays.asList(939595276, 923014145, 996964245, 939209664, 812768637, 662950565, 695404039,
+            598080822)
+    );
+    String expectedResult = "Possible";
+    String results = organizingContainersOfBalls.organizingContainers(containers);
+
+    Assert.assertEquals(expectedResult, results);
+  }
+
+
 }

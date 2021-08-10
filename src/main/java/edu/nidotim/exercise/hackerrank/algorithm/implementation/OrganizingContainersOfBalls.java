@@ -81,10 +81,10 @@ public class OrganizingContainersOfBalls {
                 currentNumberOfBalls -= swapNumber;
                 container.get(j).set(i, currentNumberOfBalls);
                 container.get(i).set(k, swapBalls - swapNumber);
-                container.get(k).set(i, container.get(k).get(i) + swapNumber);
+                container.get(j).set(k, container.get(j).get(k) + swapNumber);
                 container.get(i).set(i, container.get(i).get(i) + swapNumber);
                 swap = true;
-                print(container, j, i, i, k, k, i, i, i);
+                print(container, j, i, i, k, j, k, i, i);
               }
               System.out.println(
                   "A =====>" + i + ", " + j + ", " + k + ", " + currentNumberOfBalls + ", "
